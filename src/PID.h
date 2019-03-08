@@ -45,6 +45,32 @@ class PID {
   double Kp;
   double Ki;
   double Kd;
+
+  public:
+    double get_Kp(){
+      return Kp;
+    }
+
+    void set_Kp(double newValue){
+      Kp = newValue;
+    }
+
+    double get_Ki(){
+      return Ki;
+    }
+
+    void set_Ki(double newValue){
+      Ki = newValue;
+    }
+
+    double get_Kd(){
+      return Kd;
+    }
+
+    void set_Kd(double newValue){
+      Kd = newValue;
+    }
+
 };
 
 #endif  // PID_H
