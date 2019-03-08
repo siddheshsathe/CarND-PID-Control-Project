@@ -56,6 +56,14 @@ Now let's see the details operations we did on every file.
 It also declares some new functions named and used as below:
 * `Init()`: This initializes the `p`, `i` and `d` coefficients.
 * `UpdateError()`: This is for update of `p`, `i` and `d` errors.
+  Let's see what these errors are:
+ 
+  `p` error: It is the proportional gain. It's in proportion with `cte`. Thus, if the `cte` gets very high, it affects the `p` error and thus system may get unstable and start wiggling.
+ 
+  `i` error: It is the integral gain in proportion with magnitude and duration of the error. Thus, it's equal to the integrl of all `cte` observed by the vehicle.
+ 
+  `d` error: It is derivative gain. This is used for computation of `steer_value` for consideration of rate of change of the error. This smoothes out the steering angle as `cte` reduces.
+ 
 * `TotalError()`: This function returns the total error calculated by PID controller which will be used as a `steer_value` in `main.cpp` to steer the vehicle to correct path.
 
 2. `PID.cpp`
