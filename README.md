@@ -96,4 +96,4 @@ double get_throttle(double cte, double angle, double speed){
 ```
 
 * Using above mentioned logic, we're applying brakes whenever the vehicle is taking turns, or if it's not able to get `cte` nearly equal to 0.
-* This helps to keep the `cte
+* This helps to keep the `cte` near to 0 when the vehicle is turning on turns or wiggling.
